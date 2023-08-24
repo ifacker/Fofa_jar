@@ -5,6 +5,7 @@ import Plugin.Plugin;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -18,7 +19,7 @@ public class Main implements Plugin {
         return "demo插件";
     }
     @Override
-    public Node getContent(){
+    public Node getContent(Stage primaryStage){
         // 创建插件的内容
         VBox content = new VBox();
         Label label = new Label("demo");
