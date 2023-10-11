@@ -2,7 +2,6 @@ package runTest;
 
 import Config.GlobalConfig;
 import Config.SaveConfig;
-import Plugin.Plugin;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -19,7 +18,7 @@ public class Main extends Application {
         GlobalConfig.configTypeNow = new SaveConfig().load(GlobalConfig.configPath[1]);
 
         // 将选项卡面板添加到主容器的中心位置
-        plugins.PluginDemo.Main test = new plugins.PluginDemo.Main();
+        plugins.Fofa.Main test = new plugins.Fofa.Main();
         root.setCenter(test.getContent(primaryStage));
 
         // 创建场景并将主容器添加到场景中
@@ -32,6 +31,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+
         launch(args);
     }
 }

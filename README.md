@@ -1,4 +1,4 @@
-# 插件开发手册  
+# Fofa_jar  
   
 ---   
 ⚠️ 本程序是使用 jdk1.8 开发  
@@ -13,61 +13,20 @@
 
 
 ## 主程序界面
-<img src="img/5.png">
+<img src="img/1.png">
+<img src="img/2.png">
+<img src="img/3.png">
+<img src="img/4.png">
 
 ## 版本更新
-### v1.4 🐱
-更新了主程序的 v1.4 版本的新接口
+### v1.0 🐶
+v1.0 刚刚上线，有点紧张 😣  
 
-## 创建主函数入口的包名
-开发插件的主目录应在 plugins 下，命名目录为程序的名称，如下图：
-<img src="img/1.png">  
-
-## 修改 pom 文件
-在之后编译的时候，需要修改 pom.xml 文件中的包名，如下图：
-<img src="img/2.png">  
-
-## 开发主函数
-开发主函数的时候，如下图，有两个函数
-<img src="img/3.png"> 
-分别为：`getName` 和 `getContent`
-### getName
-主要放置插件标签页内的名称 'title' 
-### getContent
-主要放置后续开发的主程序的代码
-
-## 开发注意事项⚠️
-在开发 http 这类网络 🛜 请求的时候，推荐使用 okhttp3,如下图：
-<img src="img/4.png">
-本程序内置了代理，包含 http/socks5，所以如果需要发起网络请求，推荐使用如下代码：
-```java
-        // 创建 client 
-        OkHttpClient client = new ProxyInternet().newClient();
-
-        // 创建 HTTP 请求
-        Request request = new Request.Builder()
-        .url("https://www.baidu.com")
-        .build();
-
-        Response response = null;
-        try {
-        // 发送请求
-        response = client.newCall(request).execute();
-        // 处理响应
-        System.out.println(response.body().string());
-
-        } catch (IOException e) {
-        e.printStackTrace();
-        }
-```
-使用这个代码创建的请求，会自动跟随主程序设置的代理进行请求
-
-### 测试运行
-如需测试运行，可以在 runTest 目录下的 Main 函数处启动，如图，修改创建对象的包名即可：  
-<img src="img/6.png">  
-
-启动后，如下图所示：  
-<img src="img/7.png">
+## 其他链接：
+[ToolsKing_github](https://github.com/ifacker/ToolsKing)  
+[插件开发_github](https://github.com/ifacker/ToolsKing_Plugin "欢迎大家一起前来开发")  
+[插件仓库_github](https://github.com/ifacker/ToolsKingPluginLib "欢迎大家一起前来添加")  
+[Fofa_jar](https://github.com/ifacker/Fofa_jar)  
 
 --- 
 最后，如果有不明白的，可以提 issues
