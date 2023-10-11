@@ -27,6 +27,7 @@ public class RootPageAdvanced {
         VBox vBox = new VBox(10);
         vBox.setPadding(new Insets(5,10,5,10));
         vBox.getChildren().addAll(
+                new Items().itemSub("link", "资产的URL链接"),
                 new Items().itemSub("host", "主机名/URL"),
                 new Items().itemSub("ip", "IP地址"),
                 new Items().itemSub("port", "端口"),
@@ -37,7 +38,6 @@ public class RootPageAdvanced {
                 new Items().itemSub("title", "网站标题"),
                 new Items().itemSub("header", "网站header"),
                 new Items().itemSub("server", "网站server"),
-                new Items().itemSub("link", "资产的URL链接"),
                 new Items().itemSub("country", "国家代码"),
                 new Items().itemSub("country_name", "国家名"),
                 new Items().itemSub("region", "区域"),
