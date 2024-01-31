@@ -5,7 +5,6 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.checkerframework.checker.units.qual.A;
 import plugins.Fofa.Config.GlobalConfig;
 import plugins.Fofa.DataType.Advanced;
 import plugins.Fofa.DataType.Config;

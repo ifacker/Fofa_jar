@@ -3,7 +3,7 @@ package plugins.Fofa.Config;
 import plugins.Fofa.DataType.Config;
 
 public class GlobalConfig {
-    public static String VERSION = "1.0.1";
+    public static String VERSION = "1.0.2";
 
 //    // fofa email
 //    public static String EMAIL;
